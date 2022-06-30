@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<HTML lang = "en">
+<HEAD>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  
+  
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+  </script>
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  
+<style>
+pre.hljl {
+    border: 1px solid #ccc;
+    margin: 5px;
+    padding: 5px;
+    overflow-x: auto;
+    color: rgb(68,68,68); background-color: rgb(251,251,251); }
+pre.hljl > span.hljl-t { }
+pre.hljl > span.hljl-w { }
+pre.hljl > span.hljl-e { }
+pre.hljl > span.hljl-eB { }
+pre.hljl > span.hljl-o { }
+pre.hljl > span.hljl-k { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kc { color: rgb(59,151,46); font-style: italic; }
+pre.hljl > span.hljl-kd { color: rgb(214,102,97); font-style: italic; }
+pre.hljl > span.hljl-kn { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kp { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kr { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kt { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-n { }
+pre.hljl > span.hljl-na { }
+pre.hljl > span.hljl-nb { }
+pre.hljl > span.hljl-nbp { }
+pre.hljl > span.hljl-nc { }
+pre.hljl > span.hljl-ncB { }
+pre.hljl > span.hljl-nd { color: rgb(214,102,97); }
+pre.hljl > span.hljl-ne { }
+pre.hljl > span.hljl-neB { }
+pre.hljl > span.hljl-nf { color: rgb(66,102,213); }
+pre.hljl > span.hljl-nfm { color: rgb(66,102,213); }
+pre.hljl > span.hljl-np { }
+pre.hljl > span.hljl-nl { }
+pre.hljl > span.hljl-nn { }
+pre.hljl > span.hljl-no { }
+pre.hljl > span.hljl-nt { }
+pre.hljl > span.hljl-nv { }
+pre.hljl > span.hljl-nvc { }
+pre.hljl > span.hljl-nvg { }
+pre.hljl > span.hljl-nvi { }
+pre.hljl > span.hljl-nvm { }
+pre.hljl > span.hljl-l { }
+pre.hljl > span.hljl-ld { color: rgb(148,91,176); font-style: italic; }
+pre.hljl > span.hljl-s { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sa { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sb { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sc { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sd { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sdB { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sdC { color: rgb(201,61,57); }
+pre.hljl > span.hljl-se { color: rgb(59,151,46); }
+pre.hljl > span.hljl-sh { color: rgb(201,61,57); }
+pre.hljl > span.hljl-si { }
+pre.hljl > span.hljl-so { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sr { color: rgb(201,61,57); }
+pre.hljl > span.hljl-ss { color: rgb(201,61,57); }
+pre.hljl > span.hljl-ssB { color: rgb(201,61,57); }
+pre.hljl > span.hljl-nB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nbB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nfB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nh { color: rgb(59,151,46); }
+pre.hljl > span.hljl-ni { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nil { color: rgb(59,151,46); }
+pre.hljl > span.hljl-noB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-oB { color: rgb(102,102,102); font-weight: bold; }
+pre.hljl > span.hljl-ow { color: rgb(102,102,102); font-weight: bold; }
+pre.hljl > span.hljl-p { }
+pre.hljl > span.hljl-c { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-ch { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cm { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cp { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cpB { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cs { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-csB { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-g { }
+pre.hljl > span.hljl-gd { }
+pre.hljl > span.hljl-ge { }
+pre.hljl > span.hljl-geB { }
+pre.hljl > span.hljl-gh { }
+pre.hljl > span.hljl-gi { }
+pre.hljl > span.hljl-go { }
+pre.hljl > span.hljl-gp { }
+pre.hljl > span.hljl-gs { }
+pre.hljl > span.hljl-gsB { }
+pre.hljl > span.hljl-gt { }
+</style>
+
+
+
+  <style type="text/css">
+  @font-face {
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+}
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  font-family: monospace, monospace;
+  font-size : 0.8em;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+thead th {
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+tr:nth-child(odd){
+  background-color: rgb(248,248,248);
+}
+
+
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+html {
+  font-size: 62.5%; }
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300; }
+h1 { font-size: 3.6rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.4rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.2rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.8rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 2.4rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+p {
+  margin-top: 0; }
+a {
+  color: #1EAEDB; }
+a:hover {
+  color: #0FA0CE; }
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+ul {
+  list-style: circle; }
+ol {
+  list-style: decimal; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li > p {margin : 0;}
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 1.0rem; }
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+pre.hljl {
+  margin: 0 0 10px;
+  display: block;
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding : 5px;
+}
+
+pre.output {
+  background: #ffffff;
+}
+
+pre.code {
+  background: #ffffff;
+}
+
+pre.julia-error {
+  color : red
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+
+@media (min-width: 400px) {}
+@media (min-width: 550px) {}
+@media (min-width: 750px) {}
+@media (min-width: 1000px) {}
+@media (min-width: 1200px) {}
+
+h1.title {margin-top : 20px}
+img {max-width : 100%}
+div.title {text-align: center;}
+
+  </style>
+</HEAD>
+
+<BODY>
+  <div class ="container">
+    <div class = "row">
+      <div class = "col-md-12 twelve columns">
+        <div class="title">
+          
+          
+          
+        </div>
+
+        <h2>Plots of resonance groups.</h2>
+<p>Only the real-part of the simulated spectrum is shown for each entry. All phase fixed to zero, and T2 decay set to the same value.</p>
+<p><a href="http://159.203.40.208/700MHz/2-Phenylethanol_groups_real.html">2-Phenylethanol<em>groups</em>real.html</a></p>
+<p><a href="http://159.203.40.208/700MHz/3-Hydroxybutyrate--500-MHz_groups_real.html">3-Hydroxybutyrate–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/3-Hydroxybutyrate_groups_real.html">3-Hydroxybutyrate</a></p>
+<p><a href="http://159.203.40.208/700MHz/5-Hydroxy-L-tryptophan_groups_real.html">5-Hydroxy-L-tryptophan</a></p>
+<p><a href="http://159.203.40.208/700MHz/ATP_groups_real.html">ATP</a></p>
+<p><a href="http://159.203.40.208/700MHz/Acetylcholine--400-MHz_groups_real.html">Acetylcholine–400-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/Acetylcholine_groups_real.html">Acetylcholine</a></p>
+<p><a href="http://159.203.40.208/700MHz/Choline---2000-study_groups_real.html">Choline–-2000-study</a></p>
+<p><a href="http://159.203.40.208/700MHz/Choline--500-MHz_groups_real.html">Choline–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/Choline_groups_real.html">Choline</a></p>
+<p><a href="http://159.203.40.208/700MHz/D-&#40;&#43;&#41;-Glucose_groups_real.html">D-&#40;&#43;&#41;-Glucose</a></p>
+<p><a href="http://159.203.40.208/700MHz/D-Glucose---2000-study_groups_real.html">D-Glucose–-2000-study</a></p>
+<p><a href="http://159.203.40.208/700MHz/DL-Alanine_groups_real.html">DL-Alanine</a></p>
+<p><a href="http://159.203.40.208/700MHz/DL-Serine_groups_real.html">DL-Serine</a></p>
+<p><a href="http://159.203.40.208/700MHz/DSS_groups_real.html">DSS</a></p>
+<p><a href="http://159.203.40.208/700MHz/Diethanolamine_groups_real.html">Diethanolamine</a></p>
+<p><a href="http://159.203.40.208/700MHz/Dopamine--500-MHz_groups_real.html">Dopamine–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/Dopamine_groups_real.html">Dopamine</a></p>
+<p><a href="http://159.203.40.208/700MHz/Epinephrine_groups_real.html">Epinephrine</a></p>
+<p><a href="http://159.203.40.208/700MHz/Ethanol_groups_real.html">Ethanol</a></p>
+<p><a href="http://159.203.40.208/700MHz/Folate_groups_real.html">Folate</a></p>
+<p><a href="http://159.203.40.208/700MHz/Gamma-Aminobutyric-acid_groups_real.html">Gamma-Aminobutyric-acid</a></p>
+<p><a href="http://159.203.40.208/700MHz/Glutamate---2000-study_groups_real.html">Glutamate–-2000-study</a></p>
+<p><a href="http://159.203.40.208/700MHz/Glycerol--500-MHz_groups_real.html">Glycerol–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/Glycerol_groups_real.html">Glycerol</a></p>
+<p><a href="http://159.203.40.208/700MHz/HEPES--500-MHz_groups_real.html">HEPES–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/HEPES_groups_real.html">HEPES</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-&#40;&#43;&#41;-Lactic-acid_groups_real.html">L-&#40;&#43;&#41;-Lactic-acid</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Alanine_groups_real.html">L-Alanine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Arginine-bmse000029_groups_real.html">L-Arginine-bmse000029</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Arginine-bmse000711_groups_real.html">L-Arginine-bmse000711</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Arginine-bmse000919_groups_real.html">L-Arginine-bmse000919</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Arginine_groups_real.html">L-Arginine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Asparagine--500-MHz_groups_real.html">L-Asparagine–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Asparagine_groups_real.html">L-Asparagine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Aspartic-acid_groups_real.html">L-Aspartic-acid</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Cysteine--500-MHz_groups_real.html">L-Cysteine–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Cysteine_groups_real.html">L-Cysteine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Glutamic-acid_groups_real.html">L-Glutamic-acid</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Glutamine---2000-study_groups_real.html">L-Glutamine–-2000-study</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Glutamine_groups_real.html">L-Glutamine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Glutathione-oxidized_groups_real.html">L-Glutathione-oxidized</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Glutathione-reduced_groups_real.html">L-Glutathione-reduced</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Histidine---2000-study_groups_real.html">L-Histidine–-2000-study</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Histidine--500-MHz_groups_real.html">L-Histidine–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Histidine_groups_real.html">L-Histidine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Isoleucine--bad--missing-J-coupling_groups_real.html">L-Isoleucine–bad–missing-J-coupling</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Isoleucine_groups_real.html">L-Isoleucine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Kynurenine_groups_real.html">L-Kynurenine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Leucine_groups_real.html">L-Leucine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Lysine--500-MHz_groups_real.html">L-Lysine–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Lysine_groups_real.html">L-Lysine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Methionine--500-MHz_groups_real.html">L-Methionine–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Methionine_groups_real.html">L-Methionine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Phenylalanine--500-MHz_groups_real.html">L-Phenylalanine–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Phenylalanine-bmse000921_groups_real.html">L-Phenylalanine-bmse000921</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Phenylalanine_groups_real.html">L-Phenylalanine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Proline--500-MHz_groups_real.html">L-Proline–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Proline--600-MHz_groups_real.html">L-Proline–600-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Proline_groups_real.html">L-Proline</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Serine---2000-study_groups_real.html">L-Serine–-2000-study</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Serine---mod_groups_real.html">L-Serine–-mod</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Serine--500-MHz_groups_real.html">L-Serine–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Serine_groups_real.html">L-Serine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Threonine--500-MHz_groups_real.html">L-Threonine–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Threonine_groups_real.html">L-Threonine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Tryptophan-bmse000050_groups_real.html">L-Tryptophan-bmse000050</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Tryptophan_groups_real.html">L-Tryptophan</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Tyrosine_groups_real.html">L-Tyrosine</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Valine---2000-study_groups_real.html">L-Valine–-2000-study</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Valine--500-MHz_groups_real.html">L-Valine–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/L-Valine_groups_real.html">L-Valine</a></p>
+<p><a href="http://159.203.40.208/700MHz/Myo-Inositol--500-MHz_groups_real.html">Myo-Inositol–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/Myo-Inositol-bmse000901_groups_real.html">Myo-Inositol-bmse000901</a></p>
+<p><a href="http://159.203.40.208/700MHz/Myo-Inositol_groups_real.html">Myo-Inositol</a></p>
+<p><a href="http://159.203.40.208/700MHz/N-Alpha-Acetyl-L-Lysine_groups_real.html">N-Alpha-Acetyl-L-Lysine</a></p>
+<p><a href="http://159.203.40.208/700MHz/Norepinephrine_groups_real.html">Norepinephrine</a></p>
+<p><a href="http://159.203.40.208/700MHz/Phenylacetylglycine-bmse000658_groups_real.html">Phenylacetylglycine-bmse000658</a></p>
+<p><a href="http://159.203.40.208/700MHz/Phenylacetylglycine_groups_real.html">Phenylacetylglycine</a></p>
+<p><a href="http://159.203.40.208/700MHz/Purine_groups_real.html">Purine</a></p>
+<p><a href="http://159.203.40.208/700MHz/Putrescine--500-MHz_groups_real.html">Putrescine–500-MHz</a></p>
+<p><a href="http://159.203.40.208/700MHz/Putrescine_groups_real.html">Putrescine</a></p>
+<p><a href="http://159.203.40.208/700MHz/Serotonin_groups_real.html">Serotonin</a></p>
+<p><a href="http://159.203.40.208/700MHz/Triethanolamine_groups_real.html">Triethanolamine</a></p>
+<p><a href="http://159.203.40.208/700MHz/Tryptamine_groups_real.html">Tryptamine</a></p>
+<p><a href="http://159.203.40.208/700MHz/alpha-D-Glucose_groups_real.html">alpha-D-Glucose</a></p>
+<p><a href="http://159.203.40.208/700MHz/beta-Alanine_groups_real.html">beta-Alanine</a></p>
+<p><a href="http://159.203.40.208/700MHz/beta-D-Glucose_groups_real.html">beta-D-Glucose</a></p>
+<h2>Number of resonance groups for each spin system:</h2>
+<pre><code>Entry: L-Arginine-bmse000029
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;7&#93;
+Number of spins for each system: &#91;7&#93;
+Number of resonance components for each system: &#91;523&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;56, 61, 112, 16, 80, 64, 64&#93;&#93;
+
+Entry: L-Arginine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;6&#93;
+Number of spins for each system: &#91;7&#93;
+Number of resonance components for each system: &#91;416&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;96, 64, 64, 64, 64, 64&#93;&#93;
+
+Entry: L-Isoleucine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;6&#93;
+Number of spins for each system: &#91;10&#93;
+Number of resonance components for each system: &#91;4454&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;894, 806, 698, 690, 686, 680&#93;&#93;
+
+Entry: L-Methionine--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;4&#93;
+Number of spins for each system: &#91;5&#93;
+Number of resonance components for each system: &#91;64&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;16, 16, 16, 16&#93;&#93;
+
+Entry: Dopamine
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;3, 2&#93;
+Number of spins for each system: &#91;3, 4&#93;
+Number of resonance components for each system: &#91;12, 20&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;, &#91;10, 10&#93;&#93;
+
+Entry: L-Glutamic-acid
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;5&#93;
+Number of spins for each system: &#91;5&#93;
+Number of resonance components for each system: &#91;80&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;16, 16, 16, 16, 16&#93;&#93;
+
+Entry: L-Glutathione-oxidized
+Number of non-singlet spin systems: 6
+Resonance group sizes for each system: &#91;5, 5, 2, 2, 3, 3&#93;
+Number of spins for each system: &#91;5, 5, 2, 2, 3, 3&#93;
+Number of resonance components for each system: &#91;80, 80, 4, 4, 12, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;16, 16, 16, 16, 16&#93;, &#91;16, 16, 16, 16, 16&#93;, &#91;2, 2&#93;, &#91;2, 2&#93;, &#91;4, 4, 4&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: Myo-Inositol-bmse000901
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;6&#93;
+Number of spins for each system: &#91;6&#93;
+Number of resonance components for each system: &#91;224&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;32, 32, 32, 32, 32, 32&#93;&#93;
+
+Entry: Acetylcholine--400-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;4&#93;
+Number of spins for each system: &#91;4&#93;
+Number of resonance components for each system: &#91;40&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4, 4&#93;&#93;
+
+Entry: D-&#40;&#43;&#41;-Glucose
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;7, 8&#93;
+Number of spins for each system: &#91;7, 7&#93;
+Number of resonance components for each system: &#91;452, 488&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;64, 64, 64, 64, 64, 64, 64&#93;, &#91;16, 8, 48, 48, 64, 64, 48, 64&#93;&#93;
+
+Entry: Ethanol
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;2&#93;
+Number of spins for each system: &#91;5&#93;
+Number of resonance components for each system: &#91;46&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;26, 20&#93;&#93;
+
+Entry: Choline
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;2&#93;
+Number of spins for each system: &#91;4&#93;
+Number of resonance components for each system: &#91;32&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;16, 16&#93;&#93;
+
+Entry: 5-Hydroxy-L-tryptophan
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;4, 3&#93;
+Number of spins for each system: &#91;4, 3&#93;
+Number of resonance components for each system: &#91;32, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;8, 8, 8, 8&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: L-Histidine--500-MHz
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;2, 3&#93;
+Number of spins for each system: &#91;2, 3&#93;
+Number of resonance components for each system: &#91;4, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;2, 2&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: Norepinephrine
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;3, 3&#93;
+Number of spins for each system: &#91;3, 3&#93;
+Number of resonance components for each system: &#91;12, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: D-Glucose---2000-study
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;7, 7&#93;
+Number of spins for each system: &#91;7, 7&#93;
+Number of resonance components for each system: &#91;450, 496&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;64, 64, 64, 64, 64, 64, 64&#93;, &#91;64, 64, 64, 64, 64, 64, 64&#93;&#93;
+
+Entry: L-Threonine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;4&#93;
+Number of spins for each system: &#91;5&#93;
+Number of resonance components for each system: &#91;48&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;12, 16, 16, 4&#93;&#93;
+
+Entry: L-Arginine-bmse000711
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;6&#93;
+Number of spins for each system: &#91;7&#93;
+Number of resonance components for each system: &#91;424&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;64, 64, 64, 64, 64, 64&#93;&#93;
+
+Entry: 3-4-Dihydroxy-L-phenylalanine
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;3, 3&#93;
+Number of spins for each system: &#91;3, 3&#93;
+Number of resonance components for each system: &#91;12, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: L-Proline
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;8&#93;
+Number of spins for each system: &#91;7&#93;
+Number of resonance components for each system: &#91;469&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;62, 62, 2, 62, 1, 62, 62, 62&#93;&#93;
+
+Entry: L-Serine--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;3&#93;
+Number of resonance components for each system: &#91;12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;&#93;
+
+Entry: L-Phenylalanine
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;3, 3&#93;
+Number of spins for each system: &#91;5, 3&#93;
+Number of resonance components for each system: &#91;64, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;24, 24, 16&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: L-Isoleucine--bad--missing-J-coupling
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;4&#93;
+Number of spins for each system: &#91;4&#93;
+Number of resonance components for each system: &#91;32&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;8, 8, 8, 8&#93;&#93;
+
+Entry: Glycerol--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;5&#93;
+Number of resonance components for each system: &#91;100&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;8, 8, 20&#93;&#93;
+
+Entry: 3-Hydroxybutyrate--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;4&#93;
+Number of spins for each system: &#91;6&#93;
+Number of resonance components for each system: &#91;136&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;24, 32, 32, 32&#93;&#93;
+
+Entry: HEPES--500-MHz
+Number of non-singlet spin systems: 3
+Resonance group sizes for each system: &#91;2, 2, 2&#93;
+Number of spins for each system: &#91;8, 4, 4&#93;
+Number of resonance components for each system: &#91;831, 20, 25&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;128, 110&#93;, &#91;10, 10&#93;, &#91;12, 13&#93;&#93;
+
+Entry: Glutamate---2000-study
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;5&#93;
+Number of spins for each system: &#91;5&#93;
+Number of resonance components for each system: &#91;80&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;16, 16, 16, 16, 16&#93;&#93;
+
+Entry: L-Serine---2000-study
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;3&#93;
+Number of resonance components for each system: &#91;12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;&#93;
+
+Entry: Folate
+Number of non-singlet spin systems: 3
+Resonance group sizes for each system: &#91;2, 2, 5&#93;
+Number of spins for each system: &#91;2, 2, 5&#93;
+Number of resonance components for each system: &#91;4, 4, 80&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;2, 2&#93;, &#91;2, 2&#93;, &#91;16, 16, 16, 16, 16&#93;&#93;
+
+Entry: L-Lysine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;8&#93;
+Number of spins for each system: &#91;9&#93;
+Number of resonance components for each system: &#91;2039&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;224, 224, 256, 256, 256, 256, 256, 256&#93;&#93;
+
+Entry: Acetylcholine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;2&#93;
+Number of spins for each system: &#91;4&#93;
+Number of resonance components for each system: &#91;22&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;11, 11&#93;&#93;
+
+Entry: Choline--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;4&#93;
+Number of resonance components for each system: &#91;30&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;8, 10, 10&#93;&#93;
+
+Entry: N-Alpha-Acetyl-L-Lysine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;7&#93;
+Number of spins for each system: &#91;9&#93;
+Number of resonance components for each system: &#91;1864&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;256, 256, 256, 256, 256, 256, 256&#93;&#93;
+
+Entry: L-Glutamine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;5&#93;
+Number of spins for each system: &#91;5&#93;
+Number of resonance components for each system: &#91;94&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;16, 16, 16, 16, 16&#93;&#93;
+
+Entry: L-Tryptophan
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;4, 3&#93;
+Number of spins for each system: &#91;4, 3&#93;
+Number of resonance components for each system: &#91;32, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;8, 8, 8, 8&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: Diethanolamine
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;2, 2&#93;
+Number of spins for each system: &#91;4, 4&#93;
+Number of resonance components for each system: &#91;20, 20&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;10, 10&#93;, &#91;10, 10&#93;&#93;
+
+Entry: Purine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;2&#93;
+Number of spins for each system: &#91;2&#93;
+Number of resonance components for each system: &#91;4&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;2, 2&#93;&#93;
+
+Entry: 2-Phenylethanol
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;3, 2&#93;
+Number of spins for each system: &#91;5, 4&#93;
+Number of resonance components for each system: &#91;103, 20&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;9, 8, 19&#93;, &#91;10, 10&#93;&#93;
+
+Entry: L-Histidine---2000-study
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;4&#93;
+Number of spins for each system: &#91;4&#93;
+Number of resonance components for each system: &#91;32&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;8, 8, 8, 8&#93;&#93;
+
+Entry: HEPES
+Number of non-singlet spin systems: 3
+Resonance group sizes for each system: &#91;2, 3, 2&#93;
+Number of spins for each system: &#91;8, 4, 4&#93;
+Number of resonance components for each system: &#91;831, 33, 26&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;128, 110&#93;, &#91;17, 12, 4&#93;, &#91;12, 14&#93;&#93;
+
+Entry: L-Asparagine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;3&#93;
+Number of resonance components for each system: &#91;12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;&#93;
+
+Entry: DL-Alanine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;2&#93;
+Number of spins for each system: &#91;4&#93;
+Number of resonance components for each system: &#91;22&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;12, 10&#93;&#93;
+
+Entry: L-Kynurenine
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;4, 2&#93;
+Number of spins for each system: &#91;4, 3&#93;
+Number of resonance components for each system: &#91;32, 8&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;8, 8, 8, 8&#93;, &#91;4, 4&#93;&#93;
+
+Entry: Putrescine--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;8&#93;
+Number of resonance components for each system: &#91;833&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;136, 164, 150&#93;&#93;
+
+Entry: L-Aspartic-acid
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;3&#93;
+Number of resonance components for each system: &#91;12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;&#93;
+
+Entry: Serotonin
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;3, 2&#93;
+Number of spins for each system: &#91;3, 4&#93;
+Number of resonance components for each system: &#91;12, 20&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;, &#91;10, 10&#93;&#93;
+
+Entry: L-Threonine--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;4&#93;
+Number of spins for each system: &#91;5&#93;
+Number of resonance components for each system: &#91;48&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;12, 16, 16, 4&#93;&#93;
+
+Entry: Myo-Inositol
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;6&#93;
+Number of spins for each system: &#91;6&#93;
+Number of resonance components for each system: &#91;224&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;32, 32, 32, 32, 32, 32&#93;&#93;
+
+Entry: L-Leucine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;9&#93;
+Number of spins for each system: &#91;10&#93;
+Number of resonance components for each system: &#91;6735&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;1053, 1067, 455, 62, 186, 561, 459, 633, 823&#93;&#93;
+
+Entry: Epinephrine
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;3, 3&#93;
+Number of spins for each system: &#91;3, 3&#93;
+Number of resonance components for each system: &#91;12, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 2, 4&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: L-&#40;&#43;&#41;-Lactic-acid
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;4&#93;
+Number of resonance components for each system: &#91;16&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;6, 8, 2&#93;&#93;
+
+Entry: L-Glutathione-reduced
+Number of non-singlet spin systems: 3
+Resonance group sizes for each system: &#91;5, 2, 3&#93;
+Number of spins for each system: &#91;5, 2, 3&#93;
+Number of resonance components for each system: &#91;84, 4, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;12, 12, 16, 14, 16&#93;, &#91;2, 2&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: L-Valine---2000-study
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;8&#93;
+Number of spins for each system: &#91;8&#93;
+Number of resonance components for each system: &#91;1048&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;97, 82, 92, 70, 6, 4, 2, 3&#93;&#93;
+
+Entry: beta-D-Glucose
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;7&#93;
+Number of spins for each system: &#91;7&#93;
+Number of resonance components for each system: &#91;452&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;64, 64, 64, 64, 64, 64, 64&#93;&#93;
+
+Entry: L-Serine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;3&#93;
+Number of resonance components for each system: &#91;12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;&#93;
+
+Entry: L-Glutamine---2000-study
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;5&#93;
+Number of spins for each system: &#91;5&#93;
+Number of resonance components for each system: &#91;92&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;16, 16, 16, 16, 16&#93;&#93;
+
+Entry: Gamma-Aminobutyric-acid
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;6&#93;
+Number of resonance components for each system: &#91;112&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;40, 32, 40&#93;&#93;
+
+Entry: L-Phenylalanine-bmse000921
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;3, 3&#93;
+Number of spins for each system: &#91;5, 3&#93;
+Number of resonance components for each system: &#91;64, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;24, 24, 16&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: L-Proline--600-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;7&#93;
+Number of spins for each system: &#91;7&#93;
+Number of resonance components for each system: &#91;467&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;62, 62, 4, 62, 62, 62, 62&#93;&#93;
+
+Entry: L-Cysteine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;3&#93;
+Number of resonance components for each system: &#91;12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;&#93;
+
+Entry: L-Cysteine--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;3&#93;
+Number of resonance components for each system: &#91;12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;&#93;
+
+Entry: Choline---2000-study
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;4&#93;
+Number of resonance components for each system: &#91;36&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;10, 10, 10&#93;&#93;
+
+Entry: L-Tryptophan-bmse000050
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;4, 3&#93;
+Number of spins for each system: &#91;4, 3&#93;
+Number of resonance components for each system: &#91;32, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;8, 8, 8, 8&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: ATP
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;6&#93;
+Number of spins for each system: &#91;6&#93;
+Number of resonance components for each system: &#91;192&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;32, 32, 32, 32, 32, 32&#93;&#93;
+
+Entry: Putrescine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;5&#93;
+Number of spins for each system: &#91;8&#93;
+Number of resonance components for each system: &#91;882&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;147, 59, 180, 144, 146&#93;&#93;
+
+Entry: L-Valine--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;5&#93;
+Number of spins for each system: &#91;8&#93;
+Number of resonance components for each system: &#91;792&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;136, 214, 172, 48, 178&#93;&#93;
+
+Entry: L-Phenylalanine--500-MHz
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;7, 3&#93;
+Number of spins for each system: &#91;5, 3&#93;
+Number of resonance components for each system: &#91;97, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;7, 6, 18, 8, 8, 8, 8&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: Dopamine--500-MHz
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;3, 2&#93;
+Number of spins for each system: &#91;3, 4&#93;
+Number of resonance components for each system: &#91;12, 20&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;, &#91;10, 10&#93;&#93;
+
+Entry: L-Serine---mod
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;3&#93;
+Number of resonance components for each system: &#91;12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;&#93;
+
+Entry: L-Lysine--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;8&#93;
+Number of spins for each system: &#91;9&#93;
+Number of resonance components for each system: &#91;2063&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;256, 256, 256, 256, 256, 256, 256, 256&#93;&#93;
+
+Entry: beta-Alanine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;2&#93;
+Number of spins for each system: &#91;4&#93;
+Number of resonance components for each system: &#91;20&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;10, 10&#93;&#93;
+
+Entry: L-Valine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;6&#93;
+Number of spins for each system: &#91;8&#93;
+Number of resonance components for each system: &#91;543&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;96, 96, 124, 30, 30, 124&#93;&#93;
+
+Entry: L-Methionine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;5&#93;
+Number of spins for each system: &#91;5&#93;
+Number of resonance components for each system: &#91;88&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;12, 12, 16, 16, 16&#93;&#93;
+
+Entry: Phenylacetylglycine-bmse000658
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;4, 1&#93;
+Number of spins for each system: &#91;5, 2&#93;
+Number of resonance components for each system: &#91;77, 2&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;20, 13, 20, 5&#93;, &#91;2&#93;&#93;
+
+Entry: DSS
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;6&#93;
+Number of resonance components for each system: &#91;171&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;66, 55, 50&#93;&#93;
+
+Entry: Myo-Inositol--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;6&#93;
+Number of spins for each system: &#91;6&#93;
+Number of resonance components for each system: &#91;204&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;32, 32, 32, 32, 32, 32&#93;&#93;
+
+Entry: 3-Hydroxybutyrate
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;4&#93;
+Number of spins for each system: &#91;6&#93;
+Number of resonance components for each system: &#91;174&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;52, 38, 42, 42&#93;&#93;
+
+Entry: L-Histidine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;3&#93;
+Number of resonance components for each system: &#91;12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;&#93;
+
+Entry: Glycerol
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;5&#93;
+Number of resonance components for each system: &#91;64&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;24, 24, 16&#93;&#93;
+
+Entry: Phenylacetylglycine
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;3, 2&#93;
+Number of spins for each system: &#91;5, 2&#93;
+Number of resonance components for each system: &#91;98, 4&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;15, 17, 11&#93;, &#91;2, 2&#93;&#93;
+
+Entry: L-Arginine-bmse000919
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;6&#93;
+Number of spins for each system: &#91;7&#93;
+Number of resonance components for each system: &#91;384&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;64, 64, 64, 64, 64, 64&#93;&#93;
+
+Entry: L-Asparagine--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;3&#93;
+Number of resonance components for each system: &#91;12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;&#93;
+
+Entry: L-Proline--500-MHz
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;8&#93;
+Number of spins for each system: &#91;7&#93;
+Number of resonance components for each system: &#91;472&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;62, 62, 8, 56, 2, 64, 64, 64&#93;&#93;
+
+Entry: DL-Serine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;3&#93;
+Number of spins for each system: &#91;3&#93;
+Number of resonance components for each system: &#91;12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;4, 4, 4&#93;&#93;
+
+Entry: Tryptamine
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;4, 2&#93;
+Number of spins for each system: &#91;4, 4&#93;
+Number of resonance components for each system: &#91;32, 20&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;8, 8, 8, 8&#93;, &#91;10, 10&#93;&#93;
+
+Entry: Triethanolamine
+Number of non-singlet spin systems: 3
+Resonance group sizes for each system: &#91;2, 2, 2&#93;
+Number of spins for each system: &#91;4, 4, 4&#93;
+Number of resonance components for each system: &#91;20, 20, 20&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;10, 10&#93;, &#91;10, 10&#93;, &#91;10, 10&#93;&#93;
+
+Entry: L-Tyrosine
+Number of non-singlet spin systems: 2
+Resonance group sizes for each system: &#91;4, 3&#93;
+Number of spins for each system: &#91;4, 3&#93;
+Number of resonance components for each system: &#91;40, 12&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;8, 8, 8, 8&#93;, &#91;4, 4, 4&#93;&#93;
+
+Entry: alpha-D-Glucose
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;8&#93;
+Number of spins for each system: &#91;7&#93;
+Number of resonance components for each system: &#91;488&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;16, 8, 48, 48, 64, 64, 48, 64&#93;&#93;
+
+Entry: L-Alanine
+Number of non-singlet spin systems: 1
+Resonance group sizes for each system: &#91;2&#93;
+Number of spins for each system: &#91;4&#93;
+Number of resonance components for each system: &#91;22&#93;
+Number of resonance components in each resonance group &#40;inner index&#41;,
+for each system &#40;outer index&#41;: &#91;&#91;12, 10&#93;&#93;</code></pre>
+
+
+        <HR/>
+        <div class="footer">
+          <p>
+            Published from <a href="resonance_group_home.jmd">resonance_group_home.jmd</a>
+            using <a href="http://github.com/JunoLab/Weave.jl">Weave.jl</a> v0.10.10 on 2022-06-30.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BODY>
+
+</HTML>

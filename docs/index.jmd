@@ -1,0 +1,7 @@
+
+## Model
+See the [NMRSpectraSimulator.jl signal model](https://ai4dbiological-systems.github.io/NMRSpectraSimulator.jl/) for model details.
+
+## Plots of resonance groups.
+See the [resonance group](resonance_group_home.html) for the interactive plots of resonance groups for a selected list of simulated NMR spectra of metabolites.
+
